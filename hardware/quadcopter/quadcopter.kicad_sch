@@ -1,0 +1,130 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 5e734823-29e2-4672-ac17-496bbc50a58a)
+
+  (paper "A4")
+
+  (title_block
+    (title "Quadcopter")
+    (date "2022-08-06")
+    (rev "1")
+    (company "Arkadiusz Krupiński")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 24.13 25.4) (size 19.05 15.24) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid 48b5ba62-72be-444d-968b-6f16199541d5)
+    (property "Sheet name" "Power Management" (id 0) (at 24.13 24.6884 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "power_management.kicad_sch" (id 1) (at 24.13 41.2246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (pin "5V" input (at 43.18 33.02 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 06f6ca65-608f-46a6-9bf0-81da963e4732)
+    )
+    (pin "+BATT" input (at 43.18 30.48 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 5932a02a-4d4a-45ea-b3b0-96863a9ad461)
+    )
+    (pin "3V3" input (at 43.18 35.56 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 665602f2-cf3d-45df-b743-f0ade297ac09)
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5" (page "2"))
+  )
+
+  (symbol_instances
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/dfbadce2-3d32-48bc-adaf-fcb972073c40"
+      (reference "#PWR0102") (unit 1) (value "+BATT") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/ac75a0df-19c4-48b9-bbaa-5ee61f989be1"
+      (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/7e561ac2-9725-4759-aa69-7037c28f6e43"
+      (reference "#PWR0104") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/59430abb-485d-4c61-8f46-c5bf149d6849"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/96ce8236-14c4-42cc-aa45-4706b4688e9b"
+      (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/c24527c8-7a9c-45ac-bac6-c7797d6a1f9d"
+      (reference "#PWR?") (unit 1) (value "+BATT") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/c7e04ef0-9634-4296-b843-ea371584729e"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/d5541660-e267-4111-b6a9-0ba163d50fe5"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/6063fa8a-b1e1-44f9-8329-d30deea5a265"
+      (reference "BT1") (unit 1) (value "Battery") (footprint "Battery:BatteryHolder_Keystone_500")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/12f04f64-c95f-442e-a595-528fc6c970f6"
+      (reference "CBoot?") (unit 1) (value "100 nF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/a6f2d8fa-eba2-417d-a05c-6bfac9818e8a"
+      (reference "CBoot?") (unit 1) (value "100 nF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/4e687260-f293-4ab7-a3b1-9996997e831b"
+      (reference "Cin?") (unit 1) (value "1 uF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/5b652a8f-adbf-4b29-b637-e7960f243504"
+      (reference "Cin?") (unit 1) (value "1 uF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/69ca8524-0aaa-421b-af2e-5702be76e477"
+      (reference "Cin?") (unit 1) (value "1 uF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/a1bee86a-fad6-486d-8b1b-955100944b30"
+      (reference "Cin?") (unit 1) (value "2.2uF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/41f384a1-75b3-4fc1-a6f8-ea693c255564"
+      (reference "Cinx?") (unit 1) (value "100 nF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/a40f24a6-4fbf-4822-a107-ab87ff25a633"
+      (reference "Cinx?") (unit 1) (value "100 nF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/1794a68a-0897-4abd-b23c-78c999437811"
+      (reference "Cout?") (unit 1) (value "47uF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/27590633-f47b-4705-adb8-23752c9c5ed0"
+      (reference "Cout?") (unit 1) (value "100uF") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/28414b18-cb91-4d59-aada-2255da35516e"
+      (reference "L?") (unit 1) (value "2.2uH") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/fcc4d8bf-1d15-49bc-83b9-8a8fdfcf5e10"
+      (reference "L?") (unit 1) (value "6uH") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/8523ce96-1334-41e9-bac0-0d5855de4faf"
+      (reference "Rfbb?") (unit 1) (value "22.1k") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/edcc98bb-c221-44be-839c-626bc8d48be9"
+      (reference "Rfbb?") (unit 1) (value "22.1k") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/60c04f2e-6db6-48eb-a57c-b66250b69dc4"
+      (reference "Rfbt?") (unit 1) (value "162k") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/e213fe8d-0070-4510-961d-8a834f6e55fd"
+      (reference "Rfbt?") (unit 1) (value "100k") (footprint "")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/13714c25-0262-45d2-b990-3c8c55175b74"
+      (reference "U?") (unit 1) (value "LMR51430XDDCR") (footprint "Package_TO_SOT_SMD:SOT-23-6_Handsoldering")
+    )
+    (path "/48b5ba62-72be-444d-968b-6f16199541d5/a160a14b-2b28-47fb-b27d-22fa7ab3c0ca"
+      (reference "U?") (unit 1) (value "LMR51430XDDCR") (footprint "Package_TO_SOT_SMD:SOT-23-6_Handsoldering")
+    )
+  )
+)

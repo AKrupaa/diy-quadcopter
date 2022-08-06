@@ -8,4 +8,4 @@ Design assumptions:
 ### Drone
 1. Design hardware for receiving/transmitting data through air (LORA@[EU863-870](https://www.thethingsnetwork.org/))
 2. Design hardware for drone having fun
-32. Write software
+3. Write software
