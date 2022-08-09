@@ -1588,7 +1588,7 @@
     (property "Value" "SX1272" (id 1) (at 87.1094 116.84 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_DFN_QFN:QFN-28-1EP_6x6mm_P0.65mm_EP4.8x4.8mm" (id 2) (at 85.09 93.98 0)
+    (property "Footprint" "footprints:SX1272IMLTRT" (id 2) (at 85.09 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/440000001NCE/v_VBhk1IolDgxwwnOpcS_vTFxPfSEPQbuneK3mWsXlU" (id 3) (at 85.09 91.44 0)

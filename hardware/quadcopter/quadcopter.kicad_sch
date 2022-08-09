@@ -414,13 +414,13 @@
       (reference "R?") (unit 1) (value "R") (footprint "")
     )
     (path "/a2cc3728-1ac3-4824-abd6-474f4caf2781/081764db-e627-4919-b1c0-3c944afe25cb"
-      (reference "U?") (unit 1) (value "LSM6DS3") (footprint "Package_LGA:LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y")
+      (reference "U?") (unit 1) (value "LSM6DS3") (footprint "footprints:LSM6DSO32XTR")
     )
     (path "/48b5ba62-72be-444d-968b-6f16199541d5/13714c25-0262-45d2-b990-3c8c55175b74"
       (reference "U?") (unit 1) (value "LMR51430XDDCR") (footprint "Package_TO_SOT_SMD:SOT-23-6_Handsoldering")
     )
     (path "/7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec/9e512135-93a0-4162-bcc4-6be0939b3dbb"
-      (reference "U?") (unit 1) (value "SX1272") (footprint "Package_DFN_QFN:QFN-28-1EP_6x6mm_P0.65mm_EP4.8x4.8mm")
+      (reference "U?") (unit 1) (value "SX1272") (footprint "footprints:SX1272IMLTRT")
     )
     (path "/48b5ba62-72be-444d-968b-6f16199541d5/a160a14b-2b28-47fb-b27d-22fa7ab3c0ca"
       (reference "U?") (unit 1) (value "LMR51430XDDCR") (footprint "Package_TO_SOT_SMD:SOT-23-6_Handsoldering")

@@ -347,7 +347,7 @@
     (uuid 081764db-e627-4919-b1c0-3c944afe25cb)
     (property "Reference" "U?" (id 0) (at 91.44 46.7612 0))
     (property "Value" "LSM6DS3" (id 1) (at 91.44 49.3012 0))
-    (property "Footprint" "Package_LGA:LGA-14_3x2.5mm_P0.5mm_LayoutBorder3x4y" (id 2) (at 63.5 78.74 0)
+    (property "Footprint" "footprints:LSM6DSO32XTR" (id 2) (at 63.5 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Datasheet" "www.st.com/resource/en/datasheet/lsm6ds3.pdf" (id 3) (at 76.2 77.47 0)
