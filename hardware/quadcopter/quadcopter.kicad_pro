@@ -418,6 +418,14 @@
     [
       "48b5ba62-72be-444d-968b-6f16199541d5",
       "Power Management"
+    ],
+    [
+      "a2cc3728-1ac3-4824-abd6-474f4caf2781",
+      "Sensor Motion"
+    ],
+    [
+      "7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec",
+      "RF converter"
     ]
   ],
   "text_variables": {}
