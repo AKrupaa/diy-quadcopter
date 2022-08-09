@@ -155,9 +155,6 @@
     (path "/7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec/18bb7460-8e2d-4979-b16a-c1da92783179"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
-    (path "/7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec/1d8535b1-3a06-4b2a-acd7-35474c400e86"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
     (path "/7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec/1e646a83-2d70-469d-90d6-2dfd1163a07e"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
@@ -260,9 +257,6 @@
     (path "/7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec/e4746ee1-7b65-4c03-a558-be947616bb60"
       (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
     )
-    (path "/7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec/8a159061-47ff-432b-ad03-9ef8e2964565"
-      (reference "AE?") (unit 1) (value "Antenna") (footprint "")
-    )
     (path "/48b5ba62-72be-444d-968b-6f16199541d5/6063fa8a-b1e1-44f9-8329-d30deea5a265"
       (reference "BT?") (unit 1) (value "Battery") (footprint "Battery:BatteryHolder_Keystone_500")
     )
@@ -364,6 +358,9 @@
     )
     (path "/7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec/feb450ac-b118-436a-bcbb-cd648c7c42cf"
       (reference "C?") (unit 1) (value "1nF") (footprint "")
+    )
+    (path "/7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec/0d8df0cd-a6db-405c-b360-c9a9accf4e86"
+      (reference "J?") (unit 1) (value "142-0711-821") (footprint "footprints:142-0711-821")
     )
     (path "/48b5ba62-72be-444d-968b-6f16199541d5/28414b18-cb91-4d59-aada-2255da35516e"
       (reference "L?") (unit 1) (value "L") (footprint "")
