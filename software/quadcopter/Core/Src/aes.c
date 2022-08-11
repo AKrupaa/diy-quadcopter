@@ -1,22 +1,22 @@
+/* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * File Name          : AES.c
-  * Description        : This file provides code for the configuration
-  *                      of the AES instances.
+  * @file    aes.c
+  * @brief   This file provides code for the configuration
+  *          of the AES instances.
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
-  * All rights reserved.</center></h2>
+  * Copyright (c) 2022 STMicroelectronics.
+  * All rights reserved.
   *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
   */
-
+/* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "aes.h"
 
@@ -32,6 +32,13 @@ __ALIGN_BEGIN static const uint32_t pKeyAES[4] __ALIGN_END = {
 void MX_AES_Init(void)
 {
 
+  /* USER CODE BEGIN AES_Init 0 */
+
+  /* USER CODE END AES_Init 0 */
+
+  /* USER CODE BEGIN AES_Init 1 */
+
+  /* USER CODE END AES_Init 1 */
   hcryp.Instance = AES;
   hcryp.Init.DataType = CRYP_DATATYPE_32B;
   hcryp.Init.KeySize = CRYP_KEYSIZE_128B;
@@ -44,6 +51,9 @@ void MX_AES_Init(void)
   {
     Error_Handler();
   }
+  /* USER CODE BEGIN AES_Init 2 */
+
+  /* USER CODE END AES_Init 2 */
 
 }
 
@@ -77,10 +87,8 @@ void HAL_CRYP_MspDeInit(CRYP_HandleTypeDef* crypHandle)
 
   /* USER CODE END AES_MspDeInit 1 */
   }
-} 
+}
 
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
