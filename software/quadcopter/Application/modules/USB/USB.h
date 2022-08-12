@@ -1,3 +1,6 @@
+#ifndef USB_H
+#define USB_H
+
 #include <stddef.h>
 #include <stdbool.h>
 #include <string.h>
@@ -14,3 +17,8 @@ typedef struct
 	size_t data_size;
 	char const *data;
 } xQueueUSBData;
+
+
+bool usb_init(void);
+
+#endif // USB_H

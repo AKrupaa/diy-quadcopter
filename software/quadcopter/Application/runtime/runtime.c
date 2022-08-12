@@ -30,7 +30,7 @@ static void error()
 * 	=====================================================
 */
 
-void rt_init()
+void rt_init(void)
 {
 
 	for (rt_task_t task = rt_task_0; task < rt_task_N; task++)
@@ -92,7 +92,7 @@ void rt_init()
 * 	=====================================================
 */
 
-uint32_t rt_evbitwait_any(rt_evgroup_t event)
+size_t rt_evbitwait_any_s(rt_evgroup_t event)
 {
 	assert(event < rt_evgroup_N);
 
@@ -101,7 +101,7 @@ uint32_t rt_evbitwait_any(rt_evgroup_t event)
 	return xEventGroupWaitBits(Evh, 0x00FFFFFFu, pdTRUE, pdFALSE, portMAX_DELAY);
 }
 
-uint32_t rt_evbit_check_any(rt_evgroup_t event)
+size_t rt_evbit_check_any(rt_evgroup_t event)
 {
 	assert(event < rt_evgroup_N);
 
@@ -110,7 +110,7 @@ uint32_t rt_evbit_check_any(rt_evgroup_t event)
 	return xEventGroupWaitBits(Evh, 0x00FFFFFFu, pdFALSE, pdFALSE, 0);
 }
 
-uint32_t rt_evbit_clear(rt_evgroup_t event, uint32_t bit)
+size_t rt_evbit_clear(rt_evgroup_t event, uint32_t bit)
 {
 	assert(event < rt_evgroup_N);
 

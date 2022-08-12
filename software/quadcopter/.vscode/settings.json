@@ -6,6 +6,9 @@
         "stdbool.h": "c",
         "string.h": "c",
         "stm32g4xx_it.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "cmsis_os.h": "c",
+        "aes.h": "c",
+        "runtime.h": "c"
     }
 }

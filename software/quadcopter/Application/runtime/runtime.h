@@ -4,6 +4,8 @@
  *  Created on: Mar 28, 2021
  *      Author: Arkadiusz
  */
+#ifndef RUNTIME_H
+#define RUNTIME_H
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -93,3 +95,5 @@ bool rt_queue_peek(rt_queue_t queue, void *buffer);
  */
 bool rt_timer_start(rt_timer_t timer, uint32_t timeout);
 bool rt_timer_start_ISR(rt_timer_t timer, BaseType_t *pxHigherPriorityTaskWoken);
+
+#endif // RUNTIME_H

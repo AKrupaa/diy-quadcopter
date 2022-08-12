@@ -8,6 +8,9 @@
 #include "runtime.h"
 #include "runtime_conf.h"
 
+void callback_example() {
+
+}
 /* 
 *	=====================================================
 * 						task def 
@@ -57,7 +60,7 @@ rt_evgroup_def_t const rt_evgroup_def[rt_evgroup_N] = {
 		.timeout = pdMS_TO_TICKS(20),
 		.critical = false,
 	},
-}
+};
 
 /* 
 *	=====================================================
