@@ -93,15 +93,6 @@ void HAL_PCD_MspInit(PCD_HandleTypeDef* pcdHandle)
     __HAL_RCC_USB_CLK_ENABLE();
 
     /* Peripheral interrupt init */
-    HAL_NVIC_SetPriority(USB_LP_IRQn, 5, 0);
-    HAL_NVIC_EnableIRQ(USB_LP_IRQn);
-    if(pcdHandle->Init.low_power_enable == 1)
-    {
-      /* Enable EXTI Line 18 for USB wakeup */
-      __HAL_USB_WAKEUP_EXTI_ENABLE_IT();
-      HAL_NVIC_SetPriority(USBWakeUp_IRQn, 5, 0);
-      HAL_NVIC_EnableIRQ(USBWakeUp_IRQn);
-    }
   /* USER CODE BEGIN USB_MspInit 1 */
 
   /* USER CODE END USB_MspInit 1 */

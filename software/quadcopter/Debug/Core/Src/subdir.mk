@@ -19,21 +19,6 @@ C_SRCS += \
 ../Core/Src/system_stm32g4xx.c \
 ../Core/Src/wwdg.c 
 
-C_DEPS += \
-./Core/Src/aes.d \
-./Core/Src/app_freertos.d \
-./Core/Src/crc.d \
-./Core/Src/gpio.d \
-./Core/Src/main.d \
-./Core/Src/spi.d \
-./Core/Src/stm32g4xx_hal_msp.d \
-./Core/Src/stm32g4xx_hal_timebase_tim.d \
-./Core/Src/stm32g4xx_it.d \
-./Core/Src/syscalls.d \
-./Core/Src/sysmem.d \
-./Core/Src/system_stm32g4xx.d \
-./Core/Src/wwdg.d 
-
 OBJS += \
 ./Core/Src/aes.o \
 ./Core/Src/app_freertos.o \
@@ -49,10 +34,27 @@ OBJS += \
 ./Core/Src/system_stm32g4xx.o \
 ./Core/Src/wwdg.o 
 
+C_DEPS += \
+./Core/Src/aes.d \
+./Core/Src/app_freertos.d \
+./Core/Src/crc.d \
+./Core/Src/gpio.d \
+./Core/Src/main.d \
+./Core/Src/spi.d \
+./Core/Src/stm32g4xx_hal_msp.d \
+./Core/Src/stm32g4xx_hal_timebase_tim.d \
+./Core/Src/stm32g4xx_it.d \
+./Core/Src/syscalls.d \
+./Core/Src/sysmem.d \
+./Core/Src/system_stm32g4xx.d \
+./Core/Src/wwdg.d 
+
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Src/%.o Core/Src/%.su: ../Core/Src/%.c Core/Src/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G484xx -DDEBUG -DSTM32_THREAD_SAFE_STRATEGY=4 -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../USB_Device/App -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../USB_Device/Target -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I../Core/ThreadSafe -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G484xx -DDEBUG -DSTM32_THREAD_SAFE_STRATEGY=4 -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../USB_Device/App -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../USB_Device/Target -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I../Core/ThreadSafe -I../Application -I../Application/modules -I../Application/runtime -I../Application/runtime/device_init -I../Application/runtime/ISR -I../Application/runtime/tasks -I../Application/modules/USB -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+Core/Src/app_freertos.o: ../Core/Src/app_freertos.c Core/Src/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G484xx -DDEBUG -DSTM32_THREAD_SAFE_STRATEGY=4 -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../USB_Device/App -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../USB_Device/Target -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I../Core/ThreadSafe -I"E:/workplace/projekty/diy-quadcopter/software/quadcopter/Application/modules" -I"E:/workplace/projekty/diy-quadcopter/software/quadcopter/Application/modules/USB" -I"E:/workplace/projekty/diy-quadcopter/software/quadcopter/Application/runtime" -I"E:/workplace/projekty/diy-quadcopter/software/quadcopter/Application/runtime/device_init" -I"E:/workplace/projekty/diy-quadcopter/software/quadcopter/Application/runtime/ISR" -I"E:/workplace/projekty/diy-quadcopter/software/quadcopter/Application/runtime/tasks" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Core-2f-Src
 

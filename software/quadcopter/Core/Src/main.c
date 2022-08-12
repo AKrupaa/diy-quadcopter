@@ -29,7 +29,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "runtime.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +46,9 @@
 
 /* USER CODE END PM */
 
+/* External variables --------------------------------------------------------*/
+extern PCD_HandleTypeDef hpcd_USB_FS;
+
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
@@ -55,6 +58,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 void MX_FREERTOS_Init(void);
+static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -97,6 +101,9 @@ int main(void)
   MX_SPI1_Init();
   MX_WWDG_Init();
   MX_USB_Device_Init();
+
+  /* Initialize interrupts */
+  MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -104,7 +111,6 @@ int main(void)
   /* Init scheduler */
   osKernelInitialize();  /* Call init function for freertos objects (in freertos.c) */
   MX_FREERTOS_Init();
-
   /* Start scheduler */
   osKernelStart();
 
@@ -163,6 +169,31 @@ void SystemClock_Config(void)
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
     Error_Handler();
+  }
+}
+
+/**
+  * @brief NVIC Configuration.
+  * @retval None
+  */
+static void MX_NVIC_Init(void)
+{
+  /* WWDG_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(WWDG_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(WWDG_IRQn);
+  /* USB_LP_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(USB_LP_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(USB_LP_IRQn);
+  /* SPI1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(SPI1_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(SPI1_IRQn);
+  /* USBWakeUp_IRQn interrupt configuration */
+  if (hpcd_USB_FS.Init.low_power_enable == 1)
+  {
+    /* Enable EXTI Line 18 for USB wakeup */
+    __HAL_USB_WAKEUP_EXTI_ENABLE_IT();
+    HAL_NVIC_SetPriority(USBWakeUp_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(USBWakeUp_IRQn);
   }
 }
 

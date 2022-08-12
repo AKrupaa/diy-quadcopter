@@ -1,0 +1,11 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "usb.h": "c",
+        "stddef.h": "c",
+        "stdbool.h": "c",
+        "string.h": "c",
+        "stm32g4xx_it.h": "c",
+        "main.h": "c"
+    }
+}

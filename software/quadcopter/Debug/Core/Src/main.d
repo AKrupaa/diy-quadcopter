@@ -50,7 +50,12 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/aes.h ../Core/Inc/main.h ../Core/Inc/crc.h ../Core/Inc/spi.h \
  ../USB_Device/App/usb_device.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- ../USB_Device/Target/usbd_conf.h ../Core/Inc/wwdg.h ../Core/Inc/gpio.h
+ ../USB_Device/Target/usbd_conf.h ../Core/Inc/wwdg.h ../Core/Inc/gpio.h \
+ ../Application/runtime/runtime.h ../Application/runtime/runtime_conf.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -109,3 +114,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../USB_Device/Target/usbd_conf.h:
 ../Core/Inc/wwdg.h:
 ../Core/Inc/gpio.h:
+../Application/runtime/runtime.h:
+../Application/runtime/runtime_conf.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
