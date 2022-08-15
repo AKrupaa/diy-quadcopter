@@ -426,6 +426,10 @@
     [
       "7be0d0c1-13c8-458a-b32f-9d8e35e7a9ec",
       "RF converter"
+    ],
+    [
+      "3b40489b-5f37-4115-bcf7-994d10947e81",
+      "USB_C_VIRTUAL_PORT"
     ]
   ],
   "text_variables": {}

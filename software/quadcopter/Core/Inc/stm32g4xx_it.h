@@ -54,10 +54,14 @@ void BusFault_Handler(void);
 void UsageFault_Handler(void);
 void DebugMon_Handler(void);
 void WWDG_IRQHandler(void);
+void DMA1_Channel1_IRQHandler(void);
+void DMA1_Channel2_IRQHandler(void);
 void USB_LP_IRQHandler(void);
 void TIM1_UP_TIM16_IRQHandler(void);
 void SPI1_IRQHandler(void);
 void USBWakeUp_IRQHandler(void);
+void RNG_IRQHandler(void);
+void CORDIC_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
